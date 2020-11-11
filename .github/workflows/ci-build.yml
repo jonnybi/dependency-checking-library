@@ -23,4 +23,9 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Test
       run: dotnet test --no-restore --verbosity normal
+    - name: Archive nuget
+      uses: actions/upload-artifact@v2
+      with:
+        name: nuget package
+        path: MyBaseLibrary/bin/Release/MyBaseLibrary.*.nupkg
      
