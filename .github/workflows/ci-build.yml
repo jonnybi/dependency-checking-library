@@ -17,9 +17,6 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.301
-        source-url: https://nuget.pkg.github.com/jonnybi/index.json
-      env:
-        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}    
 
     - name: Install dependencies
       run: dotnet restore
@@ -31,4 +28,4 @@ jobs:
       run: dotnet test --no-restore --verbosity normal
     
     - name: Publish nuget
-      run: dotnet nuget push "MyBaseLibrary/bin/Release/MyBaseLibrary.*.nupkg" --skip-duplicate --no-symbols true
+      run: dotnet nuget push "MyBaseLibrary/bin/Release/MyBaseLibrary.*.nupkg" --source https://nuget.pkg.github.com/jonnybi --api-key ${{github.token}} --skip-duplicate --no-symbols true
