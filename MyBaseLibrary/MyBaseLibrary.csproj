@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.2</Version>
+    <Authors></Authors>
+    <PackageProjectUrl>https://github.com/jonnybi/dependency-checking-library</PackageProjectUrl>
+    <PackageIconUrl></PackageIconUrl>
+    <PackageTags>library</PackageTags>
+    <Copyright>Copyright ©2020</Copyright>
+    <Description>a library</Description>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <NeutralLanguage>en</NeutralLanguage>
+    <RepositoryUrl>https://github.com/jonnybi/dependency-checking-library</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+  </ItemGroup>
+
+</Project>
